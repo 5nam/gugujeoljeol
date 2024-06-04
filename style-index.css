@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* HTML과 body에 고정 크기 설정 */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    background-color: #f0f0f0; /* 배경색 */
+    overflow: hidden; /* 스크롤바 제거 */
+    font-family: SUIT-Regular, sans-serif;
+}
+
+.wrapper {
+    width: 390px; /* iPhone 12 너비 */
+    height: 844px; /* iPhone 12 높이 */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.scroll-container {
+    overflow-y: auto; /* 수직 스크롤 가능 */
+    flex-grow: 1; /* 컨테이너가 남은 공간을 차지 */
+}
+
+#logo {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    justify-content: right;
+    top: -15%;
+    left: 70%;
+}
+
+.report-title {
+    margin-left: 7%;
+    font-size: 24px;
+    color: #155F96;
+    font-weight: 900;
+}
+
+.header {
+    background: white;
+    height: 70px;
+}
+
+main {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+    flex-shrink: 0; /* 네비게이션 크기 고정 */
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+main {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* 수직 중앙 정렬 */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    height: 350px;
+    /* height: 200%; */
+}
+
+.card div {
+    height: 100%;
+}
+
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    text-align: left;
+    width: 80%;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.stats div {
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin: 0;
+
+}
+
+#stats-right {
+    text-align: right;
+    color: #155F96;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#stats-left {
+    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 5%;}
+
+.card p {
+    padding: 0;
+    margin: 0;
+}
+
+/* footer 설정 */
+footer {
+    background: white;
+    color: #898989;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    height: 80px;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 하단 고정 네비게이션 */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 80%;
+    /* background: #333; */
+    color: white;
+    display: flex;
+    flex-direction:row;;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.bottom-nav-circle {
+    background-color: #155F96;
+    width: 92px;
+    height: 32px;
+    border: 0.2px solid #000000;
+    border-radius: 20px;    
+    box-sizing : border-box;
+    background: #155F96;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.bottom-nav-span {
+    margin: 20%;
+    margin-left: 5%;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.bottom-nav a img {
+    width: 24px;
+    height: 24px;
+}
+
+.bottom-nav a {
+    text-decoration-line: none;
+}
+
+.bottom-nav-span {
+    margin: 15%;
+    margin-left: 5%;
+    font-size: 12px;
+}
+
+/* 아이콘 설정들 */
+.bi.bi-house {
+    color: white;
+    font-size: 24px;
+    margin: 15%;
+    margin-right: 5%;
+}
+
+.bi.bi-chat-left-text, .bi.bi-bookmark, .bi.bi-gear {
+    color:#898989;
+    font-size: 24px;
+}

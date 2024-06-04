@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=390, initial-scale=1.0">
+    <title>구구절절 : 당신의 구절을 기록하세요.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style-memo-edit.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img id="logo" src="./images/logo.png">
+        </div>
+        <div>
+            <h1 class="book-title">생각이 너무 많은 어른들을 위한 심리학</h1>
+            <p class="book-author">김혜남 지음</p>
+        </div>
+        <div class="scroll-container">
+            <main>
+                <div class="book-info">
+                    <div id="book">
+                        <!-- 도서 이미지 출처 : https://www.yes24.com/Product/Goods/122428190 -->
+                        <img id="book-image" src="./images/book1.png">
+                        <img id="book-rating" src="./images/rating.png" alt="">
+                    </div>
+                    <div id="book-text">
+                        <div class="start-date">
+                            <p>시작 날짜</p>
+                            <p>2023. 06. 13</p>
+                        </div>
+                        <div class="end-date">
+                            <p>끝 날짜</p>
+                            <p>2024. 01. 14</p>
+                        </div>
+                        <div class="publisher">
+                            <p>출판사</p>
+                            <p>메이븐</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" value="생각을 줄이는 법">
+                    <label for="content">메모</label>
+                    <textarea id="memo-content" rows="15">생각이 많을 때는 의도적으로 생각의 고리를 끊어야 한다. 왜냐하면 생각은 고민의 고리를 물고 이어지기 때문이다. 생각은 깊이가 깊어질수록 부정적인 방향으로 빠지게 된다. 그렇다면, 생각의 고리를 끊는 방법은 무엇일까? 생각의 고민의 고리를 끊는 방법은 반사적인 행동들을 하는 것이다. 즉, 행동을 통해 생각의 고리를 끊어낸다.</textarea>
+                </div>
+                <div class="publicity">
+                    <button class="non-click click">공개</button>
+                    <button class="non-click">비공개</button>
+                </div>
+                <div class="rating-select">
+                    <label for="rating">평점</label>
+                    <select id="rating">
+                        <option value="5.0">5.0</option>
+                        <option value="4.0" selected>4.0</option>
+                        <option value="3.0">3.0</option>
+                        <option value="2.0">2.0</option>
+                        <option value="1.0">1.0</option>
+                        <!-- other options -->
+                    </select>
+                </div>
+                <button id="save-button">SAVE</button>
+            </main>
+        </div>
+        <footer>
+            <div class="bottom-nav">
+                <a href="./index.html">
+                    <i class="bi bi-house"></i>
+                </a>
+                <a href="/feed.html">
+                    <i class="bi bi-chat-left-text"></i>
+                </a>
+                <a href="/library.html">
+                    <div class="bottom-nav-circle">
+                        <i class="bi bi-bookmark"></i>
+                        <span class="bottom-nav-span">Book</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <i class="bi bi-gear"></i>
+                </a>
+            </div>
+            
+        </footer>
+    </div>
+    <script>
+        document.getElementById('save-button').addEventListener('click', function() {
+            window.location.href = 'memo.html';
+        });
+
+        const nonClick = document.querySelectorAll(".non-click");
+
+        function handleClick(event) {
+            // div에서 모든 "click" 클래스 제거
+            nonClick.forEach((e) => {
+                e.classList.remove("click");
+            });
+            // 클릭한 div만 "click"클래스 추가
+            event.target.classList.add("click");
+        }
+
+        nonClick.forEach((e) => {
+            e.addEventListener("click", handleClick);
+        });
+    </script>
+</body>
+</html>

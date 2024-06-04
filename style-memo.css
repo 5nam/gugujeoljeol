@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* HTML과 body에 고정 크기 설정 */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    background-color: #f0f0f0; /* 배경색 */
+    overflow: hidden; /* 스크롤바 제거 */
+    font-family: SUIT-Regular, sans-serif;
+}
+
+.wrapper {
+    width: 390px; /* iPhone 12 너비 */
+    height: 844px; /* iPhone 12 높이 */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 스크롤 가능한 컨테이너 */
+.scroll-container {
+    overflow-y: auto; /* 수직 스크롤 가능 */
+    flex-grow: 1; /* 컨테이너가 남은 공간을 차지 */
+}
+
+#logo {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    justify-content: right;
+    top: -15%;
+    left: 70%;
+}
+
+.book-title {
+    font-size: 20px;
+    color: #155F96;
+    font-weight: 900;
+    text-align: center;
+}
+
+.book-author {
+    font-size: 11px;
+    color: #155F96;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.header {
+    background: white;
+    height: 70px;
+}
+
+main {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+/* 책 정보 시작 */
+
+.book-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#book {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#book-image {
+    width: 138.17px;
+    height: 200px;
+}
+
+#book-rating {
+    width: 116px;
+    height: 20px;
+}
+
+#book-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.start-date, .end-date, .publisher {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+#book-text div p {
+    margin: 2%;
+    font-size: 11px;
+}
+
+/* 책 정보 끝 */
+
+/* 책 메모 카드 시작 */
+.book-memo {
+    list-style: none;
+    padding: 0;
+}
+.memo {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+.memo-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding: 3%
+}
+
+.memo-item div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.memo-item-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+#memo-title {
+    font-size: 16px;
+}
+#memo-content {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    line-height: 170%;
+}
+#memo-content, #memo-date {
+    font-size: 12px;
+    color: #6A6A6A;
+}
+.book-info {
+    flex-grow: 1;
+    text-align: left;
+}
+.book-title {
+    margin-bottom: 5px;
+}
+.book-author {
+    margin-top: 0px;
+}
+.book-rating, .book-author {
+    color: #888;
+    font-size: 12px;
+}
+/* 책 메모 카드 끝 */
+
+#list-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #155F96;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px;
+}
+
+footer {
+    background: white;
+    color: #898989;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    height: 80px;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 하단 고정 네비게이션 */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 80%;
+    /* background: #333; */
+    color: white;
+    display: flex;
+    flex-direction:row;;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.bottom-nav-circle {
+    background-color: #155F96;
+    width: 92px;
+    height: 32px;
+    border: 0.2px solid #000000;
+    border-radius: 20px;    
+    box-sizing : border-box;
+    background: #155F96;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.bottom-nav-span {
+    margin: 20%;
+    margin-left: 5%;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.bottom-nav a img {
+    width: 24px;
+    height: 24px;
+}
+
+.bottom-nav a {
+    text-decoration-line: none;
+}
+
+.bottom-nav-span {
+    margin: 15%;
+    margin-left: 5%;
+    font-size: 12px;
+}
+
+/* 아이콘 설정들 */
+.bi.bi-bookmark {
+    color: white;
+    font-size: 24px;
+    margin: 15%;
+    margin-right: 5%;
+}
+
+.bi.bi-chat-left-text, .bi.bi-house, .bi.bi-gear {
+    color:#898989;
+    font-size: 24px;
+}
